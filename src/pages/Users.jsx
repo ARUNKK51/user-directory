@@ -10,7 +10,7 @@ import {
 
 import UserForm from "../Components/UserForm";
 import UserList from "../Components/UserList";
-import ConfirmDialog from "../components/ConfirmDialog";
+import ConfirmDialog from "../Components/ConfirmDialog";
 import * as api from "../api/userApi";
 
 export default function Users() {
