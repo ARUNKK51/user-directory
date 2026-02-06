@@ -1,63 +1,63 @@
-User Management CRUD App
+# User Directory – React Application
 
-A responsive User Management CRUD application built with React + Vite and Material UI, following a clean and scalable project structure.
+A React-based User Directory application that allows users to be created, edited, viewed, and deleted. The app demonstrates clean React architecture, form validation, API integration, and deployment best practices.
 
-This project demonstrates real-world frontend practices such as API abstraction, environment variables, responsive UI design, and version control.
+---
 
-🚀 Features
-Create, Read, Update, Delete (CRUD) users
+## Live Demo
+https://user-directory-rdk9oln4o-arunkks-projects.vercel.app
 
-Responsive layout (mobile & desktop)
+## Source Code
+https://github.com/ARUNKK51/user-directory
 
-Material UI components for consistent design
+---
 
-Confirmation dialog before deleting users
+## Tech Stack
+- React (Vite)
+- Axios
+- React Hook Form
+- MockAPI
+- Vercel (Deployment)
 
-Centralized API layer using Axios
+---
 
-Environment-based configuration using .env
+## Setup Instructions
 
-Tech Stack
-React (Vite)
-Material UI (MUI)
-Axios
-MockAPi-server (mock backend for local development)
-Git & GitHub
-Vercel (deployment)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ARUNKK51/user-directory.git
+
+   Adding New Fields to the Form (Extensibility)
+
+The form follows a schema-driven architecture.
+All form fields are defined in one configuration file:
 
 
-⚙️ Environment Variables
-Create  .env file in the project root:
+src/config/userFormSchema.js
+To add a new field, only update the schema.
+Example: Adding a Date field
 
-Env
-VITE_API_BASE_URL=http://localhost:3001
-In Vite, environment variables must start with VITE_.
-The .env file is ignored by Git for security and flexibility across environments.
-🖥 Local Development
-1️⃣ Install dependencies
+Js
+{
+  name: "dateOfBirth",
+  label: "Date of Birth",
+  type: "date",
+  required: true
+}
+Example: Adding an Address field
 
-Bash
-npm install
-2️⃣ Start mock backend (json-server)
-
-Bash
-npx json-server --watch db.json --port 3001
-3️⃣ Start frontend
-
-Bash
-npm run dev
-Open the app at:
-http://localhost:5173
-
-🌐 Deployment
-The frontend is deployed using Vercel.
-Build command: npm run build
-Output directory: dist
-Environment variables are configured in the Vercel dashboard
-Backend is mocked locally using MockAPI.io.
-🧠 Key Learnings
-Clean component-based architecture
-API abstraction using Axios instances
-Proper usage of environment variables
-Responsive UI design with Material UI
-Git-based workflow and cloud deployment
+Js
+{
+  name: "address",
+  label: "Address",
+  type: "text",
+  required: false,
+  validation: {
+    minLength: 5
+  }
+}
+Steps:
+Add the new field object to userFormSchema.js
+Add the same field in the MockAPI users resource
+No changes are required in the form component or API logic
+This approach makes the form scalable, maintainable, and easy to extend.
