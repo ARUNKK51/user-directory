@@ -25,23 +25,7 @@ MockAPi-server (mock backend for local development)
 Git & GitHub
 Vercel (deployment)
 
-📁 Project Structure
 
-
-src/
-├─ api/
-│  └─ userApi.js        # API abstraction layer
-├─ components/
-│  ├─ UserForm.jsx
-│  ├─ UserList.jsx
-│  └─ ConfirmDialog.jsx
-├─ pages/
-│  └─ Users.jsx         # Main page
-├─ config/
-│  └─ axios.js (optional)
-├─ App.jsx
-├─ main.jsx
-This structure separates pages, reusable components, and API logic to keep the application scalable and maintainable.
 ⚙️ Environment Variables
 Create  .env file in the project root:
 
